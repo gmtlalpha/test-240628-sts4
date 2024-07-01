@@ -50,7 +50,7 @@ public class WishService {
 		Wish wishEntity = wishRepository.findById(id)
 				.orElseThrow(()->new IllegalArgumentException("id를 확인해주세요")); // context 영속성컨테스트에 보관
 		wishEntity.setTitle(wish.getTitle());
-		wishEntity.setinfo(wish.getinfo());
+		wishEntity.setInfo(wish.getInfo());
 		
 		return wishEntity;
 	}// 함수종료 -> 트랜잭션종료-> 영속화 되어있는 데이터를 DB로 갱신(flush) -> commit ->더티체킨
