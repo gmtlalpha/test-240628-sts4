@@ -1,0 +1,49 @@
+
+MVC 패턴 & 자바 기반의 콘솔 애플리케이션에서는
+
+관성적으로 model(domain) & controller & view 패키지를 만들고 시작하는 경우가 대부분이었다.
+
+계층형 구조
+
+controller
+	⎿ ProductController
+	⎿ MemberController
+	⎿ CartController
+
+service
+	⎿ ProductService
+	⎿ MemberService
+	⎿ CartService
+
+dao
+	⎿ ProductDao
+	⎿ MemberDao
+	⎿ CartDao
+   
+domain
+	⎿ Product
+	⎿ Member
+	⎿ Cart
+	
+	
+
+	
+도메인형 구조
+
+product
+	⎿ controller
+	⎿ service
+	⎿ dao
+	⎿ dto
+
+member
+	⎿ controller
+	⎿ service
+	⎿ dao
+	⎿ dto
+    
+cart
+	⎿ controller
+	⎿ service
+	⎿ dao
+	⎿ dto

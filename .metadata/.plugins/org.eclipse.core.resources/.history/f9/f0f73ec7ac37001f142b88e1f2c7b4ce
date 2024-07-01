@@ -1,0 +1,64 @@
+package com.rho.wish.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cos.book.domain.Wish;
+import com.rho.wish.service.BookService;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor // final 걸면 자동으로 만들어줌
+@RestController
+@CrossOrigin
+public class BookController {
+
+	private final BookService bookService;
+	
+	@GetMapping("/")
+	public ResponseEntity<?> test() {
+		
+		return new ResponseEntity<String>("ok2", HttpStatus.OK);
+	}
+	
+	@CrossOrigin
+	@GetMapping("/book")
+	public ResponseEntity<?> findAll() {
+		
+		return new ResponseEntity<>(bookService.getWishAll(), HttpStatus.OK);
+	}
+	
+	@CrossOrigin
+	@PostMapping("/book")
+	public ResponseEntity<?> save(@RequestBody Wish book) throws IllegalAccessException{
+		
+//		throw new IllegalAccessException("IT IS NOT RIGHT");
+		return new ResponseEntity<>(bookService.insertWish(book), HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/book/{id}")
+	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
+		
+		return new ResponseEntity<>(bookService.getWishOne(id), HttpStatus.OK);
+	}
+	
+	@PutMapping("/book/{id}")
+	public ResponseEntity<?> update(@PathVariable("id") Long id, @RequestBody Wish book) {
+		
+		return new ResponseEntity<>(bookService.updateWish(id, book), HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/book/{id}")
+	public ResponseEntity<?> deleteById(@PathVariable("id") Long id) {
+		
+		return new ResponseEntity<>(bookService.삭제하기(id), HttpStatus.OK);
+	}
+}
