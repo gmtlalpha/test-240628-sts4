@@ -25,4 +25,9 @@ public class Wish {
 	private String price;
 	// 2024-07-03 alpha [E]
 	
+	// 2024-07-03 charlie [S]
+	private String category;
+	private String category2;
+	// 2024-07-03 charlie [E]
+	
 }
