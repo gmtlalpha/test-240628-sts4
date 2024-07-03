@@ -20,4 +20,8 @@ public class Wish {
 	private String title;
 	private String info;
 	
+	//develop/2407/phase-2
+	private String detail;
+	private String price;
+	
 }
