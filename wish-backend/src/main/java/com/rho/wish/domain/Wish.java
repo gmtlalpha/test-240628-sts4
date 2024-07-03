@@ -27,7 +27,6 @@ public class Wish {
 	
 	// 2024-07-03 charlie [S]
 	private String category;
-	private String category2;
 	// 2024-07-03 charlie [E]
 	
 }
