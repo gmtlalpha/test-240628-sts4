@@ -20,8 +20,9 @@ public class Wish {
 	private String title;
 	private String info;
 	
-	//develop/2407/phase-2
+	// 2024-07-03 alpha [S]
 	private String detail;
 	private String price;
+	// 2024-07-03 alpha [E]
 	
 }
