@@ -24,6 +24,15 @@ public class Wish {
 	private String ail;
 	private String fdaice;
 	// 2024-07-03 alpha [E]
+<<<<<<< HEAD
 
 
+=======
+	
+	// 2024-07-03 charlie [S]
+	private String category;
+	private String category2;
+	// 2024-07-03 charlie [E]
+	
+>>>>>>> 78e6fd9b7faf09498e4496eb44efdbd41854350f
 }
