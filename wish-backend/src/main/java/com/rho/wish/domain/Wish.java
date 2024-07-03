@@ -25,11 +25,12 @@ public class Wish {
 	private String fdaice;
 	// 2024-07-03 alpha [E]
 
+	private String fdaice1;
+	private String fdaice2;
+	private String fdaice3;
+	private String fdaice4;
+	private String fdaice5;
+	private String fdaice8;
 
-
-
-	// 2024-07-03 charlie [S]
-	private String category;
-	// 2024-07-03 charlie [E]
 
 }
