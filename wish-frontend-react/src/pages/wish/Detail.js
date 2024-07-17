@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 const Detail = (props) => {
-//   const id = props.match.params.id;
-let params = useParams();
-var id = params.id;
+  //   const id = props.match.params.id;
+  const params = useParams();
+  const id = params.id;
   const [wish, setWish] = useState({
     id: '',
     title: '',
     info: '',
   });
+
+  //
   useEffect(() => {
     fetch('http://localhost:8080/wish/' + id)
       .then((res) => res.json())
@@ -18,6 +20,7 @@ var id = params.id;
       });
   }, []);
 
+  // DELETE-WISH
   const deleteWish = (id) => {
     // e.preventDefault();
     fetch('http://localhost:8080/wish', {
@@ -42,9 +45,12 @@ var id = params.id;
         }
       });
   };
-  const updateWish = (id = () => {
+
+  // UPDATE-WISH
+  const updateWish = (id) => {
     props.history.push('/updateForm/' + id);
-  });
+  };
+
   return (
     <div>
       <h1>Wish LIST in Detail</h1>
