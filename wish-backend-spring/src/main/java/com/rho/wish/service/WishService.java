@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rho.wish.domain.Wish;
-import com.rho.wish.domain.WishRepository;
+import com.rho.wish.repository.WishRepository;
 
 import lombok.RequiredArgsConstructor;
 

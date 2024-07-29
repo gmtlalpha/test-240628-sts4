@@ -1,5 +1,8 @@
 package com.rho.wish.controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,17 +25,39 @@ import lombok.RequiredArgsConstructor;
 public class WishController {
 
 	private final WishService wishService;
-	
+	private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
+	@GetMapping("/dummyAU")
+	public void dummyAU() {
+		log.info("                                                      ");
+		log.info("********************info dummyAU********************");
+		log.info("                                                      ");
+	}
+	@GetMapping("/dummyBBC")
+	public void dummyBBC() {
+		log.info("                                                      ");
+		log.info("********************info dummyBBC********************");
+		log.info("                                                      ");
+	}
+	@GetMapping("/dummyClearAU")
+	public void dummyClearAU() {
+		log.info("                                                      ");
+		log.info("********************info dummyClearAU********************");
+		log.info("                                                      ");
+	}
+	@GetMapping("/dummyClearBBC")
+	public void dummyClearBBC() {
+		log.info("                                                      ");
+		log.info("********************info dummyClearBBC********************");
+		log.info("                                                      ");
+	}
 	@GetMapping("/")
 	public ResponseEntity<?> test() {
-		
 		return new ResponseEntity<String>("ok2", HttpStatus.OK);
 	}
 	
 	@CrossOrigin
 	@GetMapping("/wish")
 	public ResponseEntity<?> findAll() {
-		
 		return new ResponseEntity<>(wishService.getWishAll(), HttpStatus.OK);
 	}
 	

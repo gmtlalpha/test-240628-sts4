@@ -1,4 +1,4 @@
-package com.rho.wish.domain;
+package com.rho.wish.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rho.wish.domain.WishRepository;
+import com.rho.wish.repository.WishRepository;
 
 //UT DB관련된 Beand IoC에 등록됨
 

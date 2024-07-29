@@ -1,6 +1,8 @@
-package com.rho.wish.domain;
+package com.rho.wish.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.rho.wish.domain.Wish;
 
 
 // @Repository 적어야 스프링 IoC에 빈으로 등록이 되는데

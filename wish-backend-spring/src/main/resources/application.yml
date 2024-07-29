@@ -3,6 +3,9 @@ server:
     encoding:
       charset: utf-8
       enabled: true
+    session:
+      cookie:
+        name: JSESSIONID
 
 spring:
   datasource:
@@ -10,11 +13,24 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: 
-    
+  session:
+    store-type: redis
+    redis:
+      namespace: shboard:session
+  data:
+    redis:
+      host: localhost
+      password: 1234
+      port: 6379
+      
   jpa:
     hibernate:
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl 
     show-sql: true
-      
+    
+logging:
+  level:
+    org.springframework.web: "debug"
+    org.hibernate: "error"

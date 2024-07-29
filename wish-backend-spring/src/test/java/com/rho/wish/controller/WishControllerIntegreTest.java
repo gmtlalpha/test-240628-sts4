@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rho.wish.domain.Wish;
-import com.rho.wish.domain.WishRepository;
+import com.rho.wish.repository.WishRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.persistence.EntityManager;
