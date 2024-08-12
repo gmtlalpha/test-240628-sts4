@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.rho.wish.domain.WishMapper">
+    <select id="readWishAll" resultType="com.rho.wish.domain.Wish">
+        SELECT * FROM wish
+    </select>
+    
+    <select id="readWishOne" parameterType="long" resultType="com.rho.wish.domain.Wish">
+        SELECT * FROM wish WHERE id = #{id}
+    </select>
+
+    <insert id="createWish" parameterType="com.rho.wish.domain.Wish">
+        INSERT INTO wish(id, title, info, country, countryCode)
+		VALUES (id_seq.nextval, #{id}, #{info}, #{country}, #{countryCode});
+    </insert>
+
+    <update id="updateWish">
+        UPDATE wish SET info = #{info}, country = #{country}, countryCode = #{countryCode}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteWishOne" parameterType="long">
+        DELETE FROM wish WHERE id = #{id}
+    </delete>
+</mapper>
