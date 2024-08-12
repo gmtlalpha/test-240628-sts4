@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rho.wish.domain.Wish;
-import com.rho.wish.repository.WishRepository;
+import com.rho.wish.service.WishService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.persistence.EntityManager;
@@ -50,7 +50,7 @@ public class WishControllerIntegreTest {
 	private MockMvc mockMvc;
 	
 	@Autowired
-	private WishRepository wishRepository;
+	private WishService wishRepository;
 	
 	@Autowired
 	private EntityManager entityManager; // DB관련

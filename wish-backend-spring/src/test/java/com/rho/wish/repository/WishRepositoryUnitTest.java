@@ -6,7 +6,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rho.wish.repository.WishRepository;
+import com.rho.wish.service.WishService;
 
 //UT DB관련된 Beand IoC에 등록됨
 
@@ -16,5 +16,5 @@ import com.rho.wish.repository.WishRepository;
 public class WishRepositoryUnitTest {
 
 	@Autowired
-	private WishRepository wishRepository;
+	private WishService wishRepository;
 }

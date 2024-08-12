@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 import com.rho.wish.domain.Wish;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rho.wish.service.WishService;
+import com.rho.wish.service.WishServiceImpl2;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -40,7 +40,7 @@ public class WishControllerUnitTest {
 	private MockMvc mockMvc;
 	
 	@MockBean // IoC환경에 bean등록됨
-	private WishService wishService;
+	private WishServiceImpl2 wishService;
 	
 	@SuppressWarnings("deprecation")
 	@Test
