@@ -23,8 +23,8 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
-import com.rho.wish.domain.Wish;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rho.wish.model.Wish;
 import com.rho.wish.service.WishServiceImpl2;
 
 import lombok.extern.slf4j.Slf4j;

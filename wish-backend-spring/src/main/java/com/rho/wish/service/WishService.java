@@ -2,19 +2,19 @@ package com.rho.wish.service;
 
 import java.util.List;
 
-import com.rho.wish.domain.Wish;
+import com.rho.wish.model.Wish;
 
 
-public interface WishService{ // entity DAO //data Access Object
+public interface WishService{
 	
-	List<Wish> readWishAll();
+	void sv_createWish(Wish wish);
+
+	List<Wish> sv_readWishList();
 	
-	Wish readWishOne(Long id);
+	Wish sv_readWishById(Long id);
 	
-	void createWish(Wish wish);
+	void sv_updateWishById(Long id, Wish wish);
 	
-	void updateWish(Long id, Wish wish);
-	
-	void deleteWishOne(Long id);
+	void sv_deleteWishById(Long id);
 	
 }
